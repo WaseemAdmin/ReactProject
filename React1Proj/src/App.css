@@ -1,0 +1,103 @@
+.user {
+  border: 2px solid;
+  padding: 10px;
+  width: 30%;
+}
+
+.user-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: flex-start; /* Align divs at the top */
+  padding: 10px;
+}
+
+.red-border {
+  border-color: red;
+}
+
+.green-border {
+  border-color: green;
+}
+
+.additional-data {
+  display: block;
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ece9e9;
+  border-radius: 20px;
+}
+
+.onHover {
+  cursor: pointer;
+}
+
+.orange-background {
+  background-color: orange;
+}
+
+.additional-div {
+  background-color: white;
+  padding: 10px;
+  margin-left: 10px; /* Add margin to separate the divs */
+  flex: 1; /* Allow the div to take remaining space */
+  border: 2px solid black;
+  padding: 10px;
+  width: 20%;
+}
+
+.todosUser {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.button {
+  margin-left: 60%; /* Add margin to create space between the word and button */
+  background-color: rgb(235, 218, 59);
+  border-color: rgb(203, 210, 216);
+  width: 50px;
+}
+
+.MarkButton {
+  margin-left: 130px;
+  background-color: rgb(235, 218, 59);
+  border-color: rgb(203, 210, 216);
+}
+
+.cancelBut{
+  background-color: rgb(235, 218, 59);
+  border-color: rgb(203, 210, 216);
+  margin-left: 60%;
+}
+
+.addBut{
+  background-color: rgb(235, 218, 59);
+  border-color: rgb(203, 210, 216);
+}
+
+.updateBut{
+  background-color: rgb(235, 218, 59);
+  border-color: rgb(203, 210, 216);
+  margin-left: 40%;
+}
+
+
+.addUser-div {
+  background-color: white;
+  padding: 10px;
+  flex: 1; /* Allow the div to take remaining space */
+  border: 2px solid black;
+  width: 20%;
+  margin-left: 40%;
+ 
+}
+
+.UserAddLabel{
+  margin-left: 40%;
+}
+
+.OtherData{
+  background-color: rgb(206, 203, 203);
+  border: 2px solid rgb(255, 255, 255);
+ padding: 5px;
+}
