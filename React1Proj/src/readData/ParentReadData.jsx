@@ -21,41 +21,6 @@ const ParentReadData = () =>
       });
 
 
-    const addUserWithoutTodos = async () =>
-    {
-        const newUser = 
-        {
-            name: 'New User',
-            email: 'newuser@example.com',
-            username: 'newuser',
-            address: 
-            {
-                street: "new street",
-                city: "new city",
-                zipcode: "new zip",
-            }
-        }
-        
-        try 
-        {
-            const response = await fetch(Usersurl, 
-            {
-                method: 'POST',
-                body: JSON.stringify(newUser),
-                headers: 
-                {
-                    'Content-type': 'application/json',
-                },
-            });
-
-        const data = await response.json();
-        setUsers(prevUsers => [...prevUsers, data]);
-        } 
-        catch (error) 
-        {
-            console.error('Error adding user:', error);
-        }
-    };
 
     useEffect(() =>{
         const getallUsers = async () =>
@@ -152,7 +117,6 @@ const ParentReadData = () =>
 
 
         <div>
-            <button onClick={addUserWithoutTodos}>Add User Without Todos</button>
 
             {
                 filteredUsers.map((user)=>{

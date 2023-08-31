@@ -53,24 +53,6 @@ const ChildReadData = (props) =>
         return todos.some(todo => !todo.completed);
       }
 
-
-    const deleteTodosForUserId = (userId) => 
-    {
-        const todosToDelete = todos.filter(todo => todo.userId === userId);
-    
-        todosToDelete.forEach(todo => {
-          fetch(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, {
-            method: 'DELETE',
-          })
-            .then(response => response.json())
-            .then(() => {
-              setTodos(prevTodos => prevTodos.filter(prevTodo => prevTodo.id !== todo.id));
-            })
-            .catch(error => console.log(`Error deleting todo with id ${todo.id}:`, error));
-        });
-      };
- 
-
       const sentToParent = () =>
       {
         props.callback(props.id);
@@ -147,7 +129,6 @@ const ChildReadData = (props) =>
                 Email : <input type="text" value={email} onChange={(event) => setEmail(event.target.value)}/>  <br/><br/>
                 
 
-                <button onClick={() => deleteTodosForUserId(props.id)}>Delete Todos for User </button><br/><br/>
                 <button className="OtherData" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>Other Data</button>
 
                 {showAdditionalData && 
