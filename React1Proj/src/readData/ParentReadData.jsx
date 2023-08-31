@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 
 const Usersurl = 'https://jsonplaceholder.typicode.com/users';
-var i=11;
 
 const ParentReadData = () =>
 {
